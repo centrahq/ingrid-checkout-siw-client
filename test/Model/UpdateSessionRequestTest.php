@@ -150,4 +150,13 @@ class UpdateSessionRequestTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "search_address"
+     */
+    public function testPropertySearchAddress()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

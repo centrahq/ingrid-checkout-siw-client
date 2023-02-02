@@ -66,7 +66,8 @@ class UpdateSessionRequest implements ModelInterface, ArrayAccess, \JsonSerializ
         'meta' => 'array<string,string>',
         'prefill_delivery_address' => '\OpenAPI\Client\Model\DeliveryAddress',
         'purchase_country' => 'string',
-        'purchase_currency' => 'string'
+        'purchase_currency' => 'string',
+        'search_address' => '\OpenAPI\Client\Model\SearchAddress'
     ];
 
     /**
@@ -84,7 +85,8 @@ class UpdateSessionRequest implements ModelInterface, ArrayAccess, \JsonSerializ
         'meta' => null,
         'prefill_delivery_address' => null,
         'purchase_country' => null,
-        'purchase_currency' => null
+        'purchase_currency' => null,
+        'search_address' => null
     ];
 
     /**
@@ -121,7 +123,8 @@ class UpdateSessionRequest implements ModelInterface, ArrayAccess, \JsonSerializ
         'meta' => 'meta',
         'prefill_delivery_address' => 'prefill_delivery_address',
         'purchase_country' => 'purchase_country',
-        'purchase_currency' => 'purchase_currency'
+        'purchase_currency' => 'purchase_currency',
+        'search_address' => 'search_address'
     ];
 
     /**
@@ -137,7 +140,8 @@ class UpdateSessionRequest implements ModelInterface, ArrayAccess, \JsonSerializ
         'meta' => 'setMeta',
         'prefill_delivery_address' => 'setPrefillDeliveryAddress',
         'purchase_country' => 'setPurchaseCountry',
-        'purchase_currency' => 'setPurchaseCurrency'
+        'purchase_currency' => 'setPurchaseCurrency',
+        'search_address' => 'setSearchAddress'
     ];
 
     /**
@@ -153,7 +157,8 @@ class UpdateSessionRequest implements ModelInterface, ArrayAccess, \JsonSerializ
         'meta' => 'getMeta',
         'prefill_delivery_address' => 'getPrefillDeliveryAddress',
         'purchase_country' => 'getPurchaseCountry',
-        'purchase_currency' => 'getPurchaseCurrency'
+        'purchase_currency' => 'getPurchaseCurrency',
+        'search_address' => 'getSearchAddress'
     ];
 
     /**
@@ -221,6 +226,7 @@ class UpdateSessionRequest implements ModelInterface, ArrayAccess, \JsonSerializ
         $this->container['prefill_delivery_address'] = $data['prefill_delivery_address'] ?? null;
         $this->container['purchase_country'] = $data['purchase_country'] ?? null;
         $this->container['purchase_currency'] = $data['purchase_currency'] ?? null;
+        $this->container['search_address'] = $data['search_address'] ?? null;
     }
 
     /**
@@ -438,6 +444,30 @@ class UpdateSessionRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     public function setPurchaseCurrency($purchase_currency)
     {
         $this->container['purchase_currency'] = $purchase_currency;
+
+        return $this;
+    }
+
+    /**
+     * Gets search_address
+     *
+     * @return \OpenAPI\Client\Model\SearchAddress|null
+     */
+    public function getSearchAddress()
+    {
+        return $this->container['search_address'];
+    }
+
+    /**
+     * Sets search_address
+     *
+     * @param \OpenAPI\Client\Model\SearchAddress|null $search_address search_address
+     *
+     * @return self
+     */
+    public function setSearchAddress($search_address)
+    {
+        $this->container['search_address'] = $search_address;
 
         return $this;
     }

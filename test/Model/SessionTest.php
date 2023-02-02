@@ -80,6 +80,15 @@ class SessionTest extends TestCase
     }
 
     /**
+     * Test attribute "additional_information"
+     */
+    public function testPropertyAdditionalInformation()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "cart"
      */
     public function testPropertyCart()
