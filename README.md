@@ -11,6 +11,19 @@ $ openapi-generator-cli generate \
             -o siw
 ```
 
+By default `openapi-generator-cli` generates OpenAPI client for the latest version of Guzzle. To prevent it use older version of `openapi-generator-cli`:
+
+```
+nvm use 18
+npm install @openapitools/openapi-generator-cli -g
+openapi-generator-cli version-manager set 5.2.1
+openapi-generator-cli generate \
+            -i https://api.ingrid.com/v1/delivery_checkout/_/swagger.json \
+            -g php \
+            -o siw
+```            
+
+
 ## Installation & Usage
 
 ### Requirements
