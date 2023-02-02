@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**additional_information** | [**\OpenAPI\Client\Model\AdditionalInfo**](AdditionalInfo.md) |  | [optional]
 **cart** | [**\OpenAPI\Client\Model\Cart**](Cart.md) |  | [optional]
 **checkout_session_id** | **string** | Identifier of the session. Generated when session is created. Used for updating, fetching and completing the session. | [optional]
 **delivery_groups** | [**\OpenAPI\Client\Model\DeliveryGroup[]**](DeliveryGroup.md) | Delivery groups contain information about session results. Information about order, selection and price can be found here. If split shipment is disabled, delivery groups contain only one entry. | [optional]

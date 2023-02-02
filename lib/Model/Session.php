@@ -59,6 +59,7 @@ class Session implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
+        'additional_information' => '\OpenAPI\Client\Model\AdditionalInfo',
         'cart' => '\OpenAPI\Client\Model\Cart',
         'checkout_session_id' => 'string',
         'delivery_groups' => '\OpenAPI\Client\Model\DeliveryGroup[]',
@@ -75,6 +76,7 @@ class Session implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'additional_information' => null,
         'cart' => null,
         'checkout_session_id' => null,
         'delivery_groups' => null,
@@ -110,6 +112,7 @@ class Session implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
+        'additional_information' => 'additional_information',
         'cart' => 'cart',
         'checkout_session_id' => 'checkout_session_id',
         'delivery_groups' => 'delivery_groups',
@@ -124,6 +127,7 @@ class Session implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
+        'additional_information' => 'setAdditionalInformation',
         'cart' => 'setCart',
         'checkout_session_id' => 'setCheckoutSessionId',
         'delivery_groups' => 'setDeliveryGroups',
@@ -138,6 +142,7 @@ class Session implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
+        'additional_information' => 'getAdditionalInformation',
         'cart' => 'getCart',
         'checkout_session_id' => 'getCheckoutSessionId',
         'delivery_groups' => 'getDeliveryGroups',
@@ -203,6 +208,7 @@ class Session implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
+        $this->container['additional_information'] = $data['additional_information'] ?? null;
         $this->container['cart'] = $data['cart'] ?? null;
         $this->container['checkout_session_id'] = $data['checkout_session_id'] ?? null;
         $this->container['delivery_groups'] = $data['delivery_groups'] ?? null;
@@ -234,6 +240,30 @@ class Session implements ModelInterface, ArrayAccess, \JsonSerializable
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets additional_information
+     *
+     * @return \OpenAPI\Client\Model\AdditionalInfo|null
+     */
+    public function getAdditionalInformation()
+    {
+        return $this->container['additional_information'];
+    }
+
+    /**
+     * Sets additional_information
+     *
+     * @param \OpenAPI\Client\Model\AdditionalInfo|null $additional_information additional_information
+     *
+     * @return self
+     */
+    public function setAdditionalInformation($additional_information)
+    {
+        $this->container['additional_information'] = $additional_information;
+
+        return $this;
+    }
 
     /**
      * Gets cart
