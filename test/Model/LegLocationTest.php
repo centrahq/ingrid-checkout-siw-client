@@ -1,6 +1,6 @@
 <?php
 /**
- * ListSessionsSummariesResponseTest
+ * LegLocationTest
  *
  * PHP version 7.3
  *
@@ -31,15 +31,15 @@ namespace OpenAPI\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ListSessionsSummariesResponseTest Class Doc Comment
+ * LegLocationTest Class Doc Comment
  *
  * @category    Class
- * @description Contains the list of session IDs with result fields.
+ * @description LegLocation represents a location that takes part in a delivery.
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ListSessionsSummariesResponseTest extends TestCase
+class LegLocationTest extends TestCase
 {
 
     /**
@@ -71,9 +71,18 @@ class ListSessionsSummariesResponseTest extends TestCase
     }
 
     /**
-     * Test "ListSessionsSummariesResponse"
+     * Test "LegLocation"
      */
-    public function testListSessionsSummariesResponse()
+    public function testLegLocation()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "address"
+     */
+    public function testPropertyAddress()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -89,18 +98,9 @@ class ListSessionsSummariesResponseTest extends TestCase
     }
 
     /**
-     * Test attribute "result"
+     * Test attribute "location_type"
      */
-    public function testPropertyResult()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "tos_id"
-     */
-    public function testPropertyTosId()
+    public function testPropertyLocationType()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

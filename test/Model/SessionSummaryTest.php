@@ -80,6 +80,15 @@ class SessionSummaryTest extends TestCase
     }
 
     /**
+     * Test attribute "addresses"
+     */
+    public function testPropertyAddresses()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "category"
      */
     public function testPropertyCategory()

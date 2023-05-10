@@ -1,6 +1,6 @@
 <?php
 /**
- * ListSessionsSummariesResponse
+ * ShippingLeg
  *
  * PHP version 7.3
  *
@@ -32,10 +32,10 @@ use \ArrayAccess;
 use \OpenAPI\Client\ObjectSerializer;
 
 /**
- * ListSessionsSummariesResponse Class Doc Comment
+ * ShippingLeg Class Doc Comment
  *
  * @category Class
- * @description Contains the list of session IDs with result fields.
+ * @description ShippingLeg represents a single step of package delivery.
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -43,7 +43,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class ListSessionsSummariesResponse implements ModelInterface, ArrayAccess, \JsonSerializable
+class ShippingLeg implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -52,7 +52,7 @@ class ListSessionsSummariesResponse implements ModelInterface, ArrayAccess, \Jso
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ListSessionsSummariesResponse';
+    protected static $openAPIModelName = 'ShippingLeg';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -60,9 +60,10 @@ class ListSessionsSummariesResponse implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        'external_id' => 'string',
-        'result' => '\OpenAPI\Client\Model\SessionSummary',
-        'tos_id' => 'string'
+        'delivery_type' => 'string',
+        'from' => '\OpenAPI\Client\Model\LegLocation',
+        'shipping_method' => 'string',
+        'to' => '\OpenAPI\Client\Model\LegLocation'
     ];
 
     /**
@@ -73,9 +74,10 @@ class ListSessionsSummariesResponse implements ModelInterface, ArrayAccess, \Jso
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'external_id' => null,
-        'result' => null,
-        'tos_id' => null
+        'delivery_type' => null,
+        'from' => null,
+        'shipping_method' => null,
+        'to' => null
     ];
 
     /**
@@ -105,9 +107,10 @@ class ListSessionsSummariesResponse implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $attributeMap = [
-        'external_id' => 'external_id',
-        'result' => 'result',
-        'tos_id' => 'tos_id'
+        'delivery_type' => 'delivery_type',
+        'from' => 'from',
+        'shipping_method' => 'shipping_method',
+        'to' => 'to'
     ];
 
     /**
@@ -116,9 +119,10 @@ class ListSessionsSummariesResponse implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $setters = [
-        'external_id' => 'setExternalId',
-        'result' => 'setResult',
-        'tos_id' => 'setTosId'
+        'delivery_type' => 'setDeliveryType',
+        'from' => 'setFrom',
+        'shipping_method' => 'setShippingMethod',
+        'to' => 'setTo'
     ];
 
     /**
@@ -127,9 +131,10 @@ class ListSessionsSummariesResponse implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $getters = [
-        'external_id' => 'getExternalId',
-        'result' => 'getResult',
-        'tos_id' => 'getTosId'
+        'delivery_type' => 'getDeliveryType',
+        'from' => 'getFrom',
+        'shipping_method' => 'getShippingMethod',
+        'to' => 'getTo'
     ];
 
     /**
@@ -189,9 +194,10 @@ class ListSessionsSummariesResponse implements ModelInterface, ArrayAccess, \Jso
      */
     public function __construct(array $data = null)
     {
-        $this->container['external_id'] = $data['external_id'] ?? null;
-        $this->container['result'] = $data['result'] ?? null;
-        $this->container['tos_id'] = $data['tos_id'] ?? null;
+        $this->container['delivery_type'] = $data['delivery_type'] ?? null;
+        $this->container['from'] = $data['from'] ?? null;
+        $this->container['shipping_method'] = $data['shipping_method'] ?? null;
+        $this->container['to'] = $data['to'] ?? null;
     }
 
     /**
@@ -219,73 +225,97 @@ class ListSessionsSummariesResponse implements ModelInterface, ArrayAccess, \Jso
 
 
     /**
-     * Gets external_id
+     * Gets delivery_type
      *
      * @return string|null
      */
-    public function getExternalId()
+    public function getDeliveryType()
     {
-        return $this->container['external_id'];
+        return $this->container['delivery_type'];
     }
 
     /**
-     * Sets external_id
+     * Sets delivery_type
      *
-     * @param string|null $external_id external_id
+     * @param string|null $delivery_type delivery_type
      *
      * @return self
      */
-    public function setExternalId($external_id)
+    public function setDeliveryType($delivery_type)
     {
-        $this->container['external_id'] = $external_id;
+        $this->container['delivery_type'] = $delivery_type;
 
         return $this;
     }
 
     /**
-     * Gets result
+     * Gets from
      *
-     * @return \OpenAPI\Client\Model\SessionSummary|null
+     * @return \OpenAPI\Client\Model\LegLocation|null
      */
-    public function getResult()
+    public function getFrom()
     {
-        return $this->container['result'];
+        return $this->container['from'];
     }
 
     /**
-     * Sets result
+     * Sets from
      *
-     * @param \OpenAPI\Client\Model\SessionSummary|null $result result
+     * @param \OpenAPI\Client\Model\LegLocation|null $from from
      *
      * @return self
      */
-    public function setResult($result)
+    public function setFrom($from)
     {
-        $this->container['result'] = $result;
+        $this->container['from'] = $from;
 
         return $this;
     }
 
     /**
-     * Gets tos_id
+     * Gets shipping_method
      *
      * @return string|null
      */
-    public function getTosId()
+    public function getShippingMethod()
     {
-        return $this->container['tos_id'];
+        return $this->container['shipping_method'];
     }
 
     /**
-     * Sets tos_id
+     * Sets shipping_method
      *
-     * @param string|null $tos_id tos_id
+     * @param string|null $shipping_method shipping_method
      *
      * @return self
      */
-    public function setTosId($tos_id)
+    public function setShippingMethod($shipping_method)
     {
-        $this->container['tos_id'] = $tos_id;
+        $this->container['shipping_method'] = $shipping_method;
+
+        return $this;
+    }
+
+    /**
+     * Gets to
+     *
+     * @return \OpenAPI\Client\Model\LegLocation|null
+     */
+    public function getTo()
+    {
+        return $this->container['to'];
+    }
+
+    /**
+     * Sets to
+     *
+     * @param \OpenAPI\Client\Model\LegLocation|null $to to
+     *
+     * @return self
+     */
+    public function setTo($to)
+    {
+        $this->container['to'] = $to;
 
         return $this;
     }

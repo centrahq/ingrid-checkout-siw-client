@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **company_name** | **string** |  | [optional]
 **country** | **string** | Country should be specified as two uppercase letters (ISO Alpha-2). Example &#x60;SE&#x60; for Sweden, &#x60;ES&#x60; for Spain. | [optional]
 **email** | **string** | Email address of the recipient. | [optional]
+**external_id** | **string** |  | [optional]
 **first_name** | **string** |  | [optional]
 **last_name** | **string** |  | [optional]
 **phone** | **string** | Phone number of the recipient. | [optional]

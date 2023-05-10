@@ -1,6 +1,6 @@
 <?php
 /**
- * ListSessionsSummariesResponse
+ * Route
  *
  * PHP version 7.3
  *
@@ -32,10 +32,10 @@ use \ArrayAccess;
 use \OpenAPI\Client\ObjectSerializer;
 
 /**
- * ListSessionsSummariesResponse Class Doc Comment
+ * Route Class Doc Comment
  *
  * @category Class
- * @description Contains the list of session IDs with result fields.
+ * @description Route represents a list of delivery steps.
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -43,7 +43,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class ListSessionsSummariesResponse implements ModelInterface, ArrayAccess, \JsonSerializable
+class Route implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -52,7 +52,7 @@ class ListSessionsSummariesResponse implements ModelInterface, ArrayAccess, \Jso
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ListSessionsSummariesResponse';
+    protected static $openAPIModelName = 'Route';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -60,9 +60,7 @@ class ListSessionsSummariesResponse implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        'external_id' => 'string',
-        'result' => '\OpenAPI\Client\Model\SessionSummary',
-        'tos_id' => 'string'
+        'shipping_legs' => '\OpenAPI\Client\Model\ShippingLeg[]'
     ];
 
     /**
@@ -73,9 +71,7 @@ class ListSessionsSummariesResponse implements ModelInterface, ArrayAccess, \Jso
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'external_id' => null,
-        'result' => null,
-        'tos_id' => null
+        'shipping_legs' => null
     ];
 
     /**
@@ -105,9 +101,7 @@ class ListSessionsSummariesResponse implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $attributeMap = [
-        'external_id' => 'external_id',
-        'result' => 'result',
-        'tos_id' => 'tos_id'
+        'shipping_legs' => 'shipping_legs'
     ];
 
     /**
@@ -116,9 +110,7 @@ class ListSessionsSummariesResponse implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $setters = [
-        'external_id' => 'setExternalId',
-        'result' => 'setResult',
-        'tos_id' => 'setTosId'
+        'shipping_legs' => 'setShippingLegs'
     ];
 
     /**
@@ -127,9 +119,7 @@ class ListSessionsSummariesResponse implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $getters = [
-        'external_id' => 'getExternalId',
-        'result' => 'getResult',
-        'tos_id' => 'getTosId'
+        'shipping_legs' => 'getShippingLegs'
     ];
 
     /**
@@ -189,9 +179,7 @@ class ListSessionsSummariesResponse implements ModelInterface, ArrayAccess, \Jso
      */
     public function __construct(array $data = null)
     {
-        $this->container['external_id'] = $data['external_id'] ?? null;
-        $this->container['result'] = $data['result'] ?? null;
-        $this->container['tos_id'] = $data['tos_id'] ?? null;
+        $this->container['shipping_legs'] = $data['shipping_legs'] ?? null;
     }
 
     /**
@@ -219,73 +207,25 @@ class ListSessionsSummariesResponse implements ModelInterface, ArrayAccess, \Jso
 
 
     /**
-     * Gets external_id
+     * Gets shipping_legs
      *
-     * @return string|null
+     * @return \OpenAPI\Client\Model\ShippingLeg[]|null
      */
-    public function getExternalId()
+    public function getShippingLegs()
     {
-        return $this->container['external_id'];
+        return $this->container['shipping_legs'];
     }
 
     /**
-     * Sets external_id
+     * Sets shipping_legs
      *
-     * @param string|null $external_id external_id
+     * @param \OpenAPI\Client\Model\ShippingLeg[]|null $shipping_legs ShippingLegs represent a list of delivery steps. For a non-chained delivery this will contain only one element.
      *
      * @return self
      */
-    public function setExternalId($external_id)
+    public function setShippingLegs($shipping_legs)
     {
-        $this->container['external_id'] = $external_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets result
-     *
-     * @return \OpenAPI\Client\Model\SessionSummary|null
-     */
-    public function getResult()
-    {
-        return $this->container['result'];
-    }
-
-    /**
-     * Sets result
-     *
-     * @param \OpenAPI\Client\Model\SessionSummary|null $result result
-     *
-     * @return self
-     */
-    public function setResult($result)
-    {
-        $this->container['result'] = $result;
-
-        return $this;
-    }
-
-    /**
-     * Gets tos_id
-     *
-     * @return string|null
-     */
-    public function getTosId()
-    {
-        return $this->container['tos_id'];
-    }
-
-    /**
-     * Sets tos_id
-     *
-     * @param string|null $tos_id tos_id
-     *
-     * @return self
-     */
-    public function setTosId($tos_id)
-    {
-        $this->container['tos_id'] = $tos_id;
+        $this->container['shipping_legs'] = $shipping_legs;
 
         return $this;
     }

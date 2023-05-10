@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**addresses** | [**\OpenAPI\Client\Model\Addresses**](Addresses.md) |  | [optional]
 **category** | [**\OpenAPI\Client\Model\DeliveryGroupCategory**](DeliveryGroupCategory.md) |  | [optional]
 **delivery_time** | [**\OpenAPI\Client\Model\DeliveryGroupDeliveryTime**](DeliveryGroupDeliveryTime.md) |  | [optional]
 **pricing** | [**\OpenAPI\Client\Model\DeliveryGroupPricing**](DeliveryGroupPricing.md) |  | [optional]

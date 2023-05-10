@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **delivery_type** | **string** | Type of delivery (pickup, instore, mailbox, delivery). | [optional]
 **meta** | **array<string,string>** | Carrier specific metadata related to the shipping option, for example addons. | [optional]
 **product** | **string** | Name of the shipping product. | [optional]
+**route** | [**\OpenAPI\Client\Model\Route**](Route.md) |  | [optional]
 **supports** | [**\OpenAPI\Client\Model\Supports**](Supports.md) |  | [optional]
 **warehouse** | [**\OpenAPI\Client\Model\DeliveryGroupWarehouse**](DeliveryGroupWarehouse.md) |  | [optional]
 

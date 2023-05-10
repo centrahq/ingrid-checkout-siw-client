@@ -67,6 +67,7 @@ class DeliveryGroupShipping implements ModelInterface, ArrayAccess, \JsonSeriali
         'delivery_type' => 'string',
         'meta' => 'array<string,string>',
         'product' => 'string',
+        'route' => '\OpenAPI\Client\Model\Route',
         'supports' => '\OpenAPI\Client\Model\Supports',
         'warehouse' => '\OpenAPI\Client\Model\DeliveryGroupWarehouse'
     ];
@@ -86,6 +87,7 @@ class DeliveryGroupShipping implements ModelInterface, ArrayAccess, \JsonSeriali
         'delivery_type' => null,
         'meta' => null,
         'product' => null,
+        'route' => null,
         'supports' => null,
         'warehouse' => null
     ];
@@ -124,6 +126,7 @@ class DeliveryGroupShipping implements ModelInterface, ArrayAccess, \JsonSeriali
         'delivery_type' => 'delivery_type',
         'meta' => 'meta',
         'product' => 'product',
+        'route' => 'route',
         'supports' => 'supports',
         'warehouse' => 'warehouse'
     ];
@@ -141,6 +144,7 @@ class DeliveryGroupShipping implements ModelInterface, ArrayAccess, \JsonSeriali
         'delivery_type' => 'setDeliveryType',
         'meta' => 'setMeta',
         'product' => 'setProduct',
+        'route' => 'setRoute',
         'supports' => 'setSupports',
         'warehouse' => 'setWarehouse'
     ];
@@ -158,6 +162,7 @@ class DeliveryGroupShipping implements ModelInterface, ArrayAccess, \JsonSeriali
         'delivery_type' => 'getDeliveryType',
         'meta' => 'getMeta',
         'product' => 'getProduct',
+        'route' => 'getRoute',
         'supports' => 'getSupports',
         'warehouse' => 'getWarehouse'
     ];
@@ -226,6 +231,7 @@ class DeliveryGroupShipping implements ModelInterface, ArrayAccess, \JsonSeriali
         $this->container['delivery_type'] = $data['delivery_type'] ?? null;
         $this->container['meta'] = $data['meta'] ?? null;
         $this->container['product'] = $data['product'] ?? null;
+        $this->container['route'] = $data['route'] ?? null;
         $this->container['supports'] = $data['supports'] ?? null;
         $this->container['warehouse'] = $data['warehouse'] ?? null;
     }
@@ -418,6 +424,30 @@ class DeliveryGroupShipping implements ModelInterface, ArrayAccess, \JsonSeriali
     public function setProduct($product)
     {
         $this->container['product'] = $product;
+
+        return $this;
+    }
+
+    /**
+     * Gets route
+     *
+     * @return \OpenAPI\Client\Model\Route|null
+     */
+    public function getRoute()
+    {
+        return $this->container['route'];
+    }
+
+    /**
+     * Sets route
+     *
+     * @param \OpenAPI\Client\Model\Route|null $route route
+     *
+     * @return self
+     */
+    public function setRoute($route)
+    {
+        $this->container['route'] = $route;
 
         return $this;
     }

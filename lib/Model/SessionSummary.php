@@ -59,6 +59,7 @@ class SessionSummary implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
+        'addresses' => '\OpenAPI\Client\Model\Addresses',
         'category' => '\OpenAPI\Client\Model\DeliveryGroupCategory',
         'delivery_time' => '\OpenAPI\Client\Model\DeliveryGroupDeliveryTime',
         'pricing' => '\OpenAPI\Client\Model\DeliveryGroupPricing',
@@ -74,6 +75,7 @@ class SessionSummary implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'addresses' => null,
         'category' => null,
         'delivery_time' => null,
         'pricing' => null,
@@ -108,6 +110,7 @@ class SessionSummary implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
+        'addresses' => 'addresses',
         'category' => 'category',
         'delivery_time' => 'delivery_time',
         'pricing' => 'pricing',
@@ -121,6 +124,7 @@ class SessionSummary implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
+        'addresses' => 'setAddresses',
         'category' => 'setCategory',
         'delivery_time' => 'setDeliveryTime',
         'pricing' => 'setPricing',
@@ -134,6 +138,7 @@ class SessionSummary implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
+        'addresses' => 'getAddresses',
         'category' => 'getCategory',
         'delivery_time' => 'getDeliveryTime',
         'pricing' => 'getPricing',
@@ -198,6 +203,7 @@ class SessionSummary implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
+        $this->container['addresses'] = $data['addresses'] ?? null;
         $this->container['category'] = $data['category'] ?? null;
         $this->container['delivery_time'] = $data['delivery_time'] ?? null;
         $this->container['pricing'] = $data['pricing'] ?? null;
@@ -228,6 +234,30 @@ class SessionSummary implements ModelInterface, ArrayAccess, \JsonSerializable
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets addresses
+     *
+     * @return \OpenAPI\Client\Model\Addresses|null
+     */
+    public function getAddresses()
+    {
+        return $this->container['addresses'];
+    }
+
+    /**
+     * Sets addresses
+     *
+     * @param \OpenAPI\Client\Model\Addresses|null $addresses addresses
+     *
+     * @return self
+     */
+    public function setAddresses($addresses)
+    {
+        $this->container['addresses'] = $addresses;
+
+        return $this;
+    }
 
     /**
      * Gets category

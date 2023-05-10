@@ -1,6 +1,6 @@
 <?php
 /**
- * DeliveryGroupShippingTest
+ * ShippingLegTest
  *
  * PHP version 7.3
  *
@@ -31,15 +31,15 @@ namespace OpenAPI\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * DeliveryGroupShippingTest Class Doc Comment
+ * ShippingLegTest Class Doc Comment
  *
  * @category    Class
- * @description How the package should be shipped to the end customer.
+ * @description ShippingLeg represents a single step of package delivery.
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class DeliveryGroupShippingTest extends TestCase
+class ShippingLegTest extends TestCase
 {
 
     /**
@@ -71,45 +71,9 @@ class DeliveryGroupShippingTest extends TestCase
     }
 
     /**
-     * Test "DeliveryGroupShipping"
+     * Test "ShippingLeg"
      */
-    public function testDeliveryGroupShipping()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "addons"
-     */
-    public function testPropertyAddons()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "carrier"
-     */
-    public function testPropertyCarrier()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "carrier_product_id"
-     */
-    public function testPropertyCarrierProductId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "delivery_addons"
-     */
-    public function testPropertyDeliveryAddons()
+    public function testShippingLeg()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -125,45 +89,27 @@ class DeliveryGroupShippingTest extends TestCase
     }
 
     /**
-     * Test attribute "meta"
+     * Test attribute "from"
      */
-    public function testPropertyMeta()
+    public function testPropertyFrom()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "product"
+     * Test attribute "shipping_method"
      */
-    public function testPropertyProduct()
+    public function testPropertyShippingMethod()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "route"
+     * Test attribute "to"
      */
-    public function testPropertyRoute()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "supports"
-     */
-    public function testPropertySupports()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "warehouse"
-     */
-    public function testPropertyWarehouse()
+    public function testPropertyTo()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
