@@ -67,6 +67,7 @@ class BillingAddress implements ModelInterface, ArrayAccess, \JsonSerializable
         'company_name' => 'string',
         'country' => 'string',
         'email' => 'string',
+        'external_id' => 'string',
         'first_name' => 'string',
         'last_name' => 'string',
         'phone' => 'string',
@@ -94,6 +95,7 @@ class BillingAddress implements ModelInterface, ArrayAccess, \JsonSerializable
         'company_name' => null,
         'country' => null,
         'email' => null,
+        'external_id' => null,
         'first_name' => null,
         'last_name' => null,
         'phone' => null,
@@ -140,6 +142,7 @@ class BillingAddress implements ModelInterface, ArrayAccess, \JsonSerializable
         'company_name' => 'company_name',
         'country' => 'country',
         'email' => 'email',
+        'external_id' => 'external_id',
         'first_name' => 'first_name',
         'last_name' => 'last_name',
         'phone' => 'phone',
@@ -165,6 +168,7 @@ class BillingAddress implements ModelInterface, ArrayAccess, \JsonSerializable
         'company_name' => 'setCompanyName',
         'country' => 'setCountry',
         'email' => 'setEmail',
+        'external_id' => 'setExternalId',
         'first_name' => 'setFirstName',
         'last_name' => 'setLastName',
         'phone' => 'setPhone',
@@ -190,6 +194,7 @@ class BillingAddress implements ModelInterface, ArrayAccess, \JsonSerializable
         'company_name' => 'getCompanyName',
         'country' => 'getCountry',
         'email' => 'getEmail',
+        'external_id' => 'getExternalId',
         'first_name' => 'getFirstName',
         'last_name' => 'getLastName',
         'phone' => 'getPhone',
@@ -266,6 +271,7 @@ class BillingAddress implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['company_name'] = $data['company_name'] ?? null;
         $this->container['country'] = $data['country'] ?? null;
         $this->container['email'] = $data['email'] ?? null;
+        $this->container['external_id'] = $data['external_id'] ?? null;
         $this->container['first_name'] = $data['first_name'] ?? null;
         $this->container['last_name'] = $data['last_name'] ?? null;
         $this->container['phone'] = $data['phone'] ?? null;
@@ -489,6 +495,30 @@ class BillingAddress implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setEmail($email)
     {
         $this->container['email'] = $email;
+
+        return $this;
+    }
+
+    /**
+     * Gets external_id
+     *
+     * @return string|null
+     */
+    public function getExternalId()
+    {
+        return $this->container['external_id'];
+    }
+
+    /**
+     * Sets external_id
+     *
+     * @param string|null $external_id external_id
+     *
+     * @return self
+     */
+    public function setExternalId($external_id)
+    {
+        $this->container['external_id'] = $external_id;
 
         return $this;
     }

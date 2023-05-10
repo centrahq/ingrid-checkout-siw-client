@@ -1,6 +1,6 @@
 <?php
 /**
- * ListSessionsSummariesResponse
+ * LegLocation
  *
  * PHP version 7.3
  *
@@ -32,10 +32,10 @@ use \ArrayAccess;
 use \OpenAPI\Client\ObjectSerializer;
 
 /**
- * ListSessionsSummariesResponse Class Doc Comment
+ * LegLocation Class Doc Comment
  *
  * @category Class
- * @description Contains the list of session IDs with result fields.
+ * @description LegLocation represents a location that takes part in a delivery.
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -43,7 +43,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class ListSessionsSummariesResponse implements ModelInterface, ArrayAccess, \JsonSerializable
+class LegLocation implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -52,7 +52,7 @@ class ListSessionsSummariesResponse implements ModelInterface, ArrayAccess, \Jso
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ListSessionsSummariesResponse';
+    protected static $openAPIModelName = 'LegLocation';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -60,9 +60,9 @@ class ListSessionsSummariesResponse implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
+        'address' => '\OpenAPI\Client\Model\Address',
         'external_id' => 'string',
-        'result' => '\OpenAPI\Client\Model\SessionSummary',
-        'tos_id' => 'string'
+        'location_type' => '\OpenAPI\Client\Model\LegLocationLocationType'
     ];
 
     /**
@@ -73,9 +73,9 @@ class ListSessionsSummariesResponse implements ModelInterface, ArrayAccess, \Jso
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'address' => null,
         'external_id' => null,
-        'result' => null,
-        'tos_id' => null
+        'location_type' => null
     ];
 
     /**
@@ -105,9 +105,9 @@ class ListSessionsSummariesResponse implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $attributeMap = [
+        'address' => 'address',
         'external_id' => 'external_id',
-        'result' => 'result',
-        'tos_id' => 'tos_id'
+        'location_type' => 'location_type'
     ];
 
     /**
@@ -116,9 +116,9 @@ class ListSessionsSummariesResponse implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $setters = [
+        'address' => 'setAddress',
         'external_id' => 'setExternalId',
-        'result' => 'setResult',
-        'tos_id' => 'setTosId'
+        'location_type' => 'setLocationType'
     ];
 
     /**
@@ -127,9 +127,9 @@ class ListSessionsSummariesResponse implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $getters = [
+        'address' => 'getAddress',
         'external_id' => 'getExternalId',
-        'result' => 'getResult',
-        'tos_id' => 'getTosId'
+        'location_type' => 'getLocationType'
     ];
 
     /**
@@ -189,9 +189,9 @@ class ListSessionsSummariesResponse implements ModelInterface, ArrayAccess, \Jso
      */
     public function __construct(array $data = null)
     {
+        $this->container['address'] = $data['address'] ?? null;
         $this->container['external_id'] = $data['external_id'] ?? null;
-        $this->container['result'] = $data['result'] ?? null;
-        $this->container['tos_id'] = $data['tos_id'] ?? null;
+        $this->container['location_type'] = $data['location_type'] ?? null;
     }
 
     /**
@@ -219,6 +219,30 @@ class ListSessionsSummariesResponse implements ModelInterface, ArrayAccess, \Jso
 
 
     /**
+     * Gets address
+     *
+     * @return \OpenAPI\Client\Model\Address|null
+     */
+    public function getAddress()
+    {
+        return $this->container['address'];
+    }
+
+    /**
+     * Sets address
+     *
+     * @param \OpenAPI\Client\Model\Address|null $address address
+     *
+     * @return self
+     */
+    public function setAddress($address)
+    {
+        $this->container['address'] = $address;
+
+        return $this;
+    }
+
+    /**
      * Gets external_id
      *
      * @return string|null
@@ -243,49 +267,25 @@ class ListSessionsSummariesResponse implements ModelInterface, ArrayAccess, \Jso
     }
 
     /**
-     * Gets result
+     * Gets location_type
      *
-     * @return \OpenAPI\Client\Model\SessionSummary|null
+     * @return \OpenAPI\Client\Model\LegLocationLocationType|null
      */
-    public function getResult()
+    public function getLocationType()
     {
-        return $this->container['result'];
+        return $this->container['location_type'];
     }
 
     /**
-     * Sets result
+     * Sets location_type
      *
-     * @param \OpenAPI\Client\Model\SessionSummary|null $result result
+     * @param \OpenAPI\Client\Model\LegLocationLocationType|null $location_type location_type
      *
      * @return self
      */
-    public function setResult($result)
+    public function setLocationType($location_type)
     {
-        $this->container['result'] = $result;
-
-        return $this;
-    }
-
-    /**
-     * Gets tos_id
-     *
-     * @return string|null
-     */
-    public function getTosId()
-    {
-        return $this->container['tos_id'];
-    }
-
-    /**
-     * Sets tos_id
-     *
-     * @param string|null $tos_id tos_id
-     *
-     * @return self
-     */
-    public function setTosId($tos_id)
-    {
-        $this->container['tos_id'] = $tos_id;
+        $this->container['location_type'] = $location_type;
 
         return $this;
     }

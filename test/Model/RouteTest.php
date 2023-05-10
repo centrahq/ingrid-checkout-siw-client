@@ -1,6 +1,6 @@
 <?php
 /**
- * ListSessionsSummariesResponseTest
+ * RouteTest
  *
  * PHP version 7.3
  *
@@ -31,15 +31,15 @@ namespace OpenAPI\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ListSessionsSummariesResponseTest Class Doc Comment
+ * RouteTest Class Doc Comment
  *
  * @category    Class
- * @description Contains the list of session IDs with result fields.
+ * @description Route represents a list of delivery steps.
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ListSessionsSummariesResponseTest extends TestCase
+class RouteTest extends TestCase
 {
 
     /**
@@ -71,36 +71,18 @@ class ListSessionsSummariesResponseTest extends TestCase
     }
 
     /**
-     * Test "ListSessionsSummariesResponse"
+     * Test "Route"
      */
-    public function testListSessionsSummariesResponse()
+    public function testRoute()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "external_id"
+     * Test attribute "shipping_legs"
      */
-    public function testPropertyExternalId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "result"
-     */
-    public function testPropertyResult()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "tos_id"
-     */
-    public function testPropertyTosId()
+    public function testPropertyShippingLegs()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

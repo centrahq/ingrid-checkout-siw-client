@@ -170,6 +170,15 @@ class DeliveryAddressTest extends TestCase
     }
 
     /**
+     * Test attribute "external_id"
+     */
+    public function testPropertyExternalId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "first_name"
      */
     public function testPropertyFirstName()

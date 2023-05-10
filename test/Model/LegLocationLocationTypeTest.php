@@ -1,6 +1,6 @@
 <?php
 /**
- * ListSessionsSummariesResponseTest
+ * LegLocationLocationTypeTest
  *
  * PHP version 7.3
  *
@@ -31,15 +31,15 @@ namespace OpenAPI\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ListSessionsSummariesResponseTest Class Doc Comment
+ * LegLocationLocationTypeTest Class Doc Comment
  *
  * @category    Class
- * @description Contains the list of session IDs with result fields.
+ * @description LocationType represents a type of a location that takes part in a delivery.
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ListSessionsSummariesResponseTest extends TestCase
+class LegLocationLocationTypeTest extends TestCase
 {
 
     /**
@@ -71,36 +71,9 @@ class ListSessionsSummariesResponseTest extends TestCase
     }
 
     /**
-     * Test "ListSessionsSummariesResponse"
+     * Test "LegLocationLocationType"
      */
-    public function testListSessionsSummariesResponse()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "external_id"
-     */
-    public function testPropertyExternalId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "result"
-     */
-    public function testPropertyResult()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "tos_id"
-     */
-    public function testPropertyTosId()
+    public function testLegLocationLocationType()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

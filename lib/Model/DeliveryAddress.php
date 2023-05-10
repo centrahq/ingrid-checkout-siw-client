@@ -69,6 +69,7 @@ class DeliveryAddress implements ModelInterface, ArrayAccess, \JsonSerializable
         'country' => 'string',
         'door_code' => 'string',
         'email' => 'string',
+        'external_id' => 'string',
         'first_name' => 'string',
         'last_name' => 'string',
         'phone' => 'string',
@@ -96,6 +97,7 @@ class DeliveryAddress implements ModelInterface, ArrayAccess, \JsonSerializable
         'country' => null,
         'door_code' => null,
         'email' => null,
+        'external_id' => null,
         'first_name' => null,
         'last_name' => null,
         'phone' => null,
@@ -142,6 +144,7 @@ class DeliveryAddress implements ModelInterface, ArrayAccess, \JsonSerializable
         'country' => 'country',
         'door_code' => 'door_code',
         'email' => 'email',
+        'external_id' => 'external_id',
         'first_name' => 'first_name',
         'last_name' => 'last_name',
         'phone' => 'phone',
@@ -167,6 +170,7 @@ class DeliveryAddress implements ModelInterface, ArrayAccess, \JsonSerializable
         'country' => 'setCountry',
         'door_code' => 'setDoorCode',
         'email' => 'setEmail',
+        'external_id' => 'setExternalId',
         'first_name' => 'setFirstName',
         'last_name' => 'setLastName',
         'phone' => 'setPhone',
@@ -192,6 +196,7 @@ class DeliveryAddress implements ModelInterface, ArrayAccess, \JsonSerializable
         'country' => 'getCountry',
         'door_code' => 'getDoorCode',
         'email' => 'getEmail',
+        'external_id' => 'getExternalId',
         'first_name' => 'getFirstName',
         'last_name' => 'getLastName',
         'phone' => 'getPhone',
@@ -268,6 +273,7 @@ class DeliveryAddress implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['country'] = $data['country'] ?? null;
         $this->container['door_code'] = $data['door_code'] ?? null;
         $this->container['email'] = $data['email'] ?? null;
+        $this->container['external_id'] = $data['external_id'] ?? null;
         $this->container['first_name'] = $data['first_name'] ?? null;
         $this->container['last_name'] = $data['last_name'] ?? null;
         $this->container['phone'] = $data['phone'] ?? null;
@@ -537,6 +543,30 @@ class DeliveryAddress implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setEmail($email)
     {
         $this->container['email'] = $email;
+
+        return $this;
+    }
+
+    /**
+     * Gets external_id
+     *
+     * @return string|null
+     */
+    public function getExternalId()
+    {
+        return $this->container['external_id'];
+    }
+
+    /**
+     * Sets external_id
+     *
+     * @param string|null $external_id external_id
+     *
+     * @return self
+     */
+    public function setExternalId($external_id)
+    {
+        $this->container['external_id'] = $external_id;
 
         return $this;
     }
