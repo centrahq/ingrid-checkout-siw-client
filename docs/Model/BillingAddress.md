@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **first_name** | **string** |  | [optional]
 **last_name** | **string** |  | [optional]
 **phone** | **string** | Phone number of the recipient. | [optional]
+**phone_country** | **string** | Phone number country of the recipient [optional] Example &#x60;SE&#x60; for Sweden, &#x60;ES&#x60; for Spain. | [optional]
 **postal_code** | **string** |  | [optional]
 **region** | **string** |  | [optional]
 **street** | **string** | Name of the street. | [optional]

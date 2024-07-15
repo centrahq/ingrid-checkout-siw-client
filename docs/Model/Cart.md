@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **attributes** | **string[]** | Attributes of the Cart. Cart level attributes are specific to the cart or for the full cart contents. Ingrid Delivery Checkout can set varied delivery scenarios based on such attributes. Ex. [“PRIO”, “AB-testID”]. | [optional]
-**cart_id** | **string** | Unique cart id for the customers cart on the merchant side. |
+**cart_id** | **string** | Unique cart id or unique hashed cart id for the customers cart on the merchant side. |
 **groups** | [**\OpenAPI\Client\Model\CartGroup[]**](CartGroup.md) |  | [optional]
 **items** | [**\OpenAPI\Client\Model\CartItem[]**](CartItem.md) | Information about the individual order items. This can be used by the shipping rule engine to calculate the best shipping option. |
 **pre_order** | **bool** | Indicated if the order can be shipped earliest on the provided shipping date. | [optional]

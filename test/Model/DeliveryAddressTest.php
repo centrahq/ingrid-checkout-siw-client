@@ -206,6 +206,15 @@ class DeliveryAddressTest extends TestCase
     }
 
     /**
+     * Test attribute "phone_country"
+     */
+    public function testPropertyPhoneCountry()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "postal_code"
      */
     public function testPropertyPostalCode()

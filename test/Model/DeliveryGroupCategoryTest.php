@@ -80,6 +80,15 @@ class DeliveryGroupCategoryTest extends TestCase
     }
 
     /**
+     * Test attribute "base_price"
+     */
+    public function testPropertyBasePrice()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "custom_text"
      */
     public function testPropertyCustomText()

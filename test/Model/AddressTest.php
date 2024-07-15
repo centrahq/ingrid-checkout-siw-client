@@ -152,6 +152,15 @@ class AddressTest extends TestCase
     }
 
     /**
+     * Test attribute "floor_number"
+     */
+    public function testPropertyFloorNumber()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "name"
      */
     public function testPropertyName()
@@ -191,6 +200,15 @@ class AddressTest extends TestCase
      * Test attribute "street_number"
      */
     public function testPropertyStreetNumber()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "subregion"
+     */
+    public function testPropertySubregion()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

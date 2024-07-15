@@ -68,11 +68,13 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
         'coordinates' => '\OpenAPI\Client\Model\Coordinates',
         'country' => 'string',
         'door_code' => 'string',
+        'floor_number' => 'string',
         'name' => 'string',
         'postal_code' => 'string',
         'region' => 'string',
         'street' => 'string',
-        'street_number' => 'string'
+        'street_number' => 'string',
+        'subregion' => 'string'
     ];
 
     /**
@@ -91,11 +93,13 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
         'coordinates' => null,
         'country' => null,
         'door_code' => null,
+        'floor_number' => null,
         'name' => null,
         'postal_code' => null,
         'region' => null,
         'street' => null,
-        'street_number' => null
+        'street_number' => null,
+        'subregion' => null
     ];
 
     /**
@@ -133,11 +137,13 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
         'coordinates' => 'coordinates',
         'country' => 'country',
         'door_code' => 'door_code',
+        'floor_number' => 'floor_number',
         'name' => 'name',
         'postal_code' => 'postal_code',
         'region' => 'region',
         'street' => 'street',
-        'street_number' => 'street_number'
+        'street_number' => 'street_number',
+        'subregion' => 'subregion'
     ];
 
     /**
@@ -154,11 +160,13 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
         'coordinates' => 'setCoordinates',
         'country' => 'setCountry',
         'door_code' => 'setDoorCode',
+        'floor_number' => 'setFloorNumber',
         'name' => 'setName',
         'postal_code' => 'setPostalCode',
         'region' => 'setRegion',
         'street' => 'setStreet',
-        'street_number' => 'setStreetNumber'
+        'street_number' => 'setStreetNumber',
+        'subregion' => 'setSubregion'
     ];
 
     /**
@@ -175,11 +183,13 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
         'coordinates' => 'getCoordinates',
         'country' => 'getCountry',
         'door_code' => 'getDoorCode',
+        'floor_number' => 'getFloorNumber',
         'name' => 'getName',
         'postal_code' => 'getPostalCode',
         'region' => 'getRegion',
         'street' => 'getStreet',
-        'street_number' => 'getStreetNumber'
+        'street_number' => 'getStreetNumber',
+        'subregion' => 'getSubregion'
     ];
 
     /**
@@ -247,11 +257,13 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['coordinates'] = $data['coordinates'] ?? null;
         $this->container['country'] = $data['country'] ?? null;
         $this->container['door_code'] = $data['door_code'] ?? null;
+        $this->container['floor_number'] = $data['floor_number'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
         $this->container['postal_code'] = $data['postal_code'] ?? null;
         $this->container['region'] = $data['region'] ?? null;
         $this->container['street'] = $data['street'] ?? null;
         $this->container['street_number'] = $data['street_number'] ?? null;
+        $this->container['subregion'] = $data['subregion'] ?? null;
     }
 
     /**
@@ -471,6 +483,30 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
+     * Gets floor_number
+     *
+     * @return string|null
+     */
+    public function getFloorNumber()
+    {
+        return $this->container['floor_number'];
+    }
+
+    /**
+     * Sets floor_number
+     *
+     * @param string|null $floor_number floor_number
+     *
+     * @return self
+     */
+    public function setFloorNumber($floor_number)
+    {
+        $this->container['floor_number'] = $floor_number;
+
+        return $this;
+    }
+
+    /**
      * Gets name
      *
      * @return string|null
@@ -586,6 +622,30 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setStreetNumber($street_number)
     {
         $this->container['street_number'] = $street_number;
+
+        return $this;
+    }
+
+    /**
+     * Gets subregion
+     *
+     * @return string|null
+     */
+    public function getSubregion()
+    {
+        return $this->container['subregion'];
+    }
+
+    /**
+     * Sets subregion
+     *
+     * @param string|null $subregion subregion
+     *
+     * @return self
+     */
+    public function setSubregion($subregion)
+    {
+        $this->container['subregion'] = $subregion;
 
         return $this;
     }

@@ -38,12 +38,15 @@ docs/Model/DistanceSpec.md
 docs/Model/Error.md
 docs/Model/GetSessionResponse.md
 docs/Model/GroupContent.md
+docs/Model/LegLocation.md
+docs/Model/LegLocationLocationType.md
 docs/Model/ListSessionsSummariesResponse.md
 docs/Model/OperationalHours.md
 docs/Model/PickupLocation.md
 docs/Model/PickupLocationType.md
 docs/Model/PriceComponent.md
 docs/Model/PriceComponentType.md
+docs/Model/Route.md
 docs/Model/SearchAddress.md
 docs/Model/Section.md
 docs/Model/SectionColumnItem.md
@@ -53,6 +56,7 @@ docs/Model/SessionSessionStatus.md
 docs/Model/SessionSummary.md
 docs/Model/ShippingDate.md
 docs/Model/ShippingDateTag.md
+docs/Model/ShippingLeg.md
 docs/Model/Supports.md
 docs/Model/Tag.md
 docs/Model/UpdateSessionRequest.md
@@ -95,6 +99,8 @@ lib/Model/DistanceSpec.php
 lib/Model/Error.php
 lib/Model/GetSessionResponse.php
 lib/Model/GroupContent.php
+lib/Model/LegLocation.php
+lib/Model/LegLocationLocationType.php
 lib/Model/ListSessionsSummariesResponse.php
 lib/Model/ModelInterface.php
 lib/Model/OperationalHours.php
@@ -102,6 +108,7 @@ lib/Model/PickupLocation.php
 lib/Model/PickupLocationType.php
 lib/Model/PriceComponent.php
 lib/Model/PriceComponentType.php
+lib/Model/Route.php
 lib/Model/SearchAddress.php
 lib/Model/Section.php
 lib/Model/SectionColumnItem.php
@@ -111,6 +118,7 @@ lib/Model/SessionSessionStatus.php
 lib/Model/SessionSummary.php
 lib/Model/ShippingDate.php
 lib/Model/ShippingDateTag.php
+lib/Model/ShippingLeg.php
 lib/Model/Supports.php
 lib/Model/Tag.php
 lib/Model/UpdateSessionRequest.php
@@ -151,12 +159,15 @@ test/Model/DistanceTest.php
 test/Model/ErrorTest.php
 test/Model/GetSessionResponseTest.php
 test/Model/GroupContentTest.php
+test/Model/LegLocationLocationTypeTest.php
+test/Model/LegLocationTest.php
 test/Model/ListSessionsSummariesResponseTest.php
 test/Model/OperationalHoursTest.php
 test/Model/PickupLocationTest.php
 test/Model/PickupLocationTypeTest.php
 test/Model/PriceComponentTest.php
 test/Model/PriceComponentTypeTest.php
+test/Model/RouteTest.php
 test/Model/SearchAddressTest.php
 test/Model/SectionColumnItemTest.php
 test/Model/SectionItemTest.php
@@ -166,6 +177,7 @@ test/Model/SessionSummaryTest.php
 test/Model/SessionTest.php
 test/Model/ShippingDateTagTest.php
 test/Model/ShippingDateTest.php
+test/Model/ShippingLegTest.php
 test/Model/SupportsTest.php
 test/Model/TagTest.php
 test/Model/UpdateSessionRequestTest.php
