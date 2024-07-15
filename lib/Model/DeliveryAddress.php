@@ -73,6 +73,7 @@ class DeliveryAddress implements ModelInterface, ArrayAccess, \JsonSerializable
         'first_name' => 'string',
         'last_name' => 'string',
         'phone' => 'string',
+        'phone_country' => 'string',
         'postal_code' => 'string',
         'region' => 'string',
         'street' => 'string',
@@ -101,6 +102,7 @@ class DeliveryAddress implements ModelInterface, ArrayAccess, \JsonSerializable
         'first_name' => null,
         'last_name' => null,
         'phone' => null,
+        'phone_country' => null,
         'postal_code' => null,
         'region' => null,
         'street' => null,
@@ -148,6 +150,7 @@ class DeliveryAddress implements ModelInterface, ArrayAccess, \JsonSerializable
         'first_name' => 'first_name',
         'last_name' => 'last_name',
         'phone' => 'phone',
+        'phone_country' => 'phone_country',
         'postal_code' => 'postal_code',
         'region' => 'region',
         'street' => 'street',
@@ -174,6 +177,7 @@ class DeliveryAddress implements ModelInterface, ArrayAccess, \JsonSerializable
         'first_name' => 'setFirstName',
         'last_name' => 'setLastName',
         'phone' => 'setPhone',
+        'phone_country' => 'setPhoneCountry',
         'postal_code' => 'setPostalCode',
         'region' => 'setRegion',
         'street' => 'setStreet',
@@ -200,6 +204,7 @@ class DeliveryAddress implements ModelInterface, ArrayAccess, \JsonSerializable
         'first_name' => 'getFirstName',
         'last_name' => 'getLastName',
         'phone' => 'getPhone',
+        'phone_country' => 'getPhoneCountry',
         'postal_code' => 'getPostalCode',
         'region' => 'getRegion',
         'street' => 'getStreet',
@@ -277,6 +282,7 @@ class DeliveryAddress implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['first_name'] = $data['first_name'] ?? null;
         $this->container['last_name'] = $data['last_name'] ?? null;
         $this->container['phone'] = $data['phone'] ?? null;
+        $this->container['phone_country'] = $data['phone_country'] ?? null;
         $this->container['postal_code'] = $data['postal_code'] ?? null;
         $this->container['region'] = $data['region'] ?? null;
         $this->container['street'] = $data['street'] ?? null;
@@ -639,6 +645,30 @@ class DeliveryAddress implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setPhone($phone)
     {
         $this->container['phone'] = $phone;
+
+        return $this;
+    }
+
+    /**
+     * Gets phone_country
+     *
+     * @return string|null
+     */
+    public function getPhoneCountry()
+    {
+        return $this->container['phone_country'];
+    }
+
+    /**
+     * Sets phone_country
+     *
+     * @param string|null $phone_country Phone number country of the recipient [optional] Example `SE` for Sweden, `ES` for Spain.
+     *
+     * @return self
+     */
+    public function setPhoneCountry($phone_country)
+    {
+        $this->container['phone_country'] = $phone_country;
 
         return $this;
     }

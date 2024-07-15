@@ -303,7 +303,7 @@ class Cart implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets cart_id
      *
-     * @param string $cart_id Unique cart id for the customers cart on the merchant side.
+     * @param string $cart_id Unique cart id or unique hashed cart id for the customers cart on the merchant side.
      *
      * @return self
      */

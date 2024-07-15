@@ -60,6 +60,7 @@ class DeliveryGroupCategory implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
+        'base_price' => 'int',
         'custom_text' => 'string',
         'custom_warning_text' => 'string',
         'external_id' => 'string',
@@ -77,6 +78,7 @@ class DeliveryGroupCategory implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'base_price' => 'int32',
         'custom_text' => null,
         'custom_warning_text' => null,
         'external_id' => null,
@@ -113,6 +115,7 @@ class DeliveryGroupCategory implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
+        'base_price' => 'base_price',
         'custom_text' => 'custom_text',
         'custom_warning_text' => 'custom_warning_text',
         'external_id' => 'external_id',
@@ -128,6 +131,7 @@ class DeliveryGroupCategory implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
+        'base_price' => 'setBasePrice',
         'custom_text' => 'setCustomText',
         'custom_warning_text' => 'setCustomWarningText',
         'external_id' => 'setExternalId',
@@ -143,6 +147,7 @@ class DeliveryGroupCategory implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
+        'base_price' => 'getBasePrice',
         'custom_text' => 'getCustomText',
         'custom_warning_text' => 'getCustomWarningText',
         'external_id' => 'getExternalId',
@@ -209,6 +214,7 @@ class DeliveryGroupCategory implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(array $data = null)
     {
+        $this->container['base_price'] = $data['base_price'] ?? null;
         $this->container['custom_text'] = $data['custom_text'] ?? null;
         $this->container['custom_warning_text'] = $data['custom_warning_text'] ?? null;
         $this->container['external_id'] = $data['external_id'] ?? null;
@@ -241,6 +247,30 @@ class DeliveryGroupCategory implements ModelInterface, ArrayAccess, \JsonSeriali
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets base_price
+     *
+     * @return int|null
+     */
+    public function getBasePrice()
+    {
+        return $this->container['base_price'];
+    }
+
+    /**
+     * Sets base_price
+     *
+     * @param int|null $base_price Base price of the carrier product for the given Delivery Promise.
+     *
+     * @return self
+     */
+    public function setBasePrice($base_price)
+    {
+        $this->container['base_price'] = $base_price;
+
+        return $this;
+    }
 
     /**
      * Gets custom_text

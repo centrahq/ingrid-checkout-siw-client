@@ -60,6 +60,7 @@ class CartGroup implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
+        'attributes' => 'string[]',
         'cart_item_sku_list' => 'string[]',
         'consolidatable' => 'bool',
         'contents' => '\OpenAPI\Client\Model\GroupContent[]',
@@ -75,6 +76,7 @@ class CartGroup implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'attributes' => null,
         'cart_item_sku_list' => null,
         'consolidatable' => null,
         'contents' => null,
@@ -109,6 +111,7 @@ class CartGroup implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
+        'attributes' => 'attributes',
         'cart_item_sku_list' => 'cart_item_sku_list',
         'consolidatable' => 'consolidatable',
         'contents' => 'contents',
@@ -122,6 +125,7 @@ class CartGroup implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
+        'attributes' => 'setAttributes',
         'cart_item_sku_list' => 'setCartItemSkuList',
         'consolidatable' => 'setConsolidatable',
         'contents' => 'setContents',
@@ -135,6 +139,7 @@ class CartGroup implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
+        'attributes' => 'getAttributes',
         'cart_item_sku_list' => 'getCartItemSkuList',
         'consolidatable' => 'getConsolidatable',
         'contents' => 'getContents',
@@ -199,6 +204,7 @@ class CartGroup implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
+        $this->container['attributes'] = $data['attributes'] ?? null;
         $this->container['cart_item_sku_list'] = $data['cart_item_sku_list'] ?? null;
         $this->container['consolidatable'] = $data['consolidatable'] ?? null;
         $this->container['contents'] = $data['contents'] ?? null;
@@ -235,6 +241,30 @@ class CartGroup implements ModelInterface, ArrayAccess, \JsonSerializable
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets attributes
+     *
+     * @return string[]|null
+     */
+    public function getAttributes()
+    {
+        return $this->container['attributes'];
+    }
+
+    /**
+     * Sets attributes
+     *
+     * @param string[]|null $attributes Attributes list of a single delivery group. Used to control the behaviour of the `cart_attributes()` filter rule for each group individually.
+     *
+     * @return self
+     */
+    public function setAttributes($attributes)
+    {
+        $this->container['attributes'] = $attributes;
+
+        return $this;
+    }
 
     /**
      * Gets cart_item_sku_list

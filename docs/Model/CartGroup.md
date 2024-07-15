@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**attributes** | **string[]** | Attributes list of a single delivery group. Used to control the behaviour of the &#x60;cart_attributes()&#x60; filter rule for each group individually. | [optional]
 **cart_item_sku_list** | **string[]** | Deprecated: use contents instead. List of cart item SKUs (unique product identifiers) that belong to the given group. SKUs in the list must match the ones provided on cart items [deprecated]. | [optional]
 **consolidatable** | **bool** | Indicates, that the group could be consolidated (merged into single group with other consolidatable groups). | [optional]
 **contents** | [**\OpenAPI\Client\Model\GroupContent[]**](GroupContent.md) |  |

@@ -61,6 +61,7 @@ class DeliveryGroupPricing implements ModelInterface, ArrayAccess, \JsonSerializ
       */
     protected static $openAPITypes = [
         'currency' => 'string',
+        'net_price' => 'int',
         'price' => 'int',
         'price_components' => '\OpenAPI\Client\Model\PriceComponent[]'
     ];
@@ -74,6 +75,7 @@ class DeliveryGroupPricing implements ModelInterface, ArrayAccess, \JsonSerializ
       */
     protected static $openAPIFormats = [
         'currency' => null,
+        'net_price' => 'int32',
         'price' => 'int32',
         'price_components' => null
     ];
@@ -106,6 +108,7 @@ class DeliveryGroupPricing implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     protected static $attributeMap = [
         'currency' => 'currency',
+        'net_price' => 'net_price',
         'price' => 'price',
         'price_components' => 'price_components'
     ];
@@ -117,6 +120,7 @@ class DeliveryGroupPricing implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     protected static $setters = [
         'currency' => 'setCurrency',
+        'net_price' => 'setNetPrice',
         'price' => 'setPrice',
         'price_components' => 'setPriceComponents'
     ];
@@ -128,6 +132,7 @@ class DeliveryGroupPricing implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     protected static $getters = [
         'currency' => 'getCurrency',
+        'net_price' => 'getNetPrice',
         'price' => 'getPrice',
         'price_components' => 'getPriceComponents'
     ];
@@ -190,6 +195,7 @@ class DeliveryGroupPricing implements ModelInterface, ArrayAccess, \JsonSerializ
     public function __construct(array $data = null)
     {
         $this->container['currency'] = $data['currency'] ?? null;
+        $this->container['net_price'] = $data['net_price'] ?? null;
         $this->container['price'] = $data['price'] ?? null;
         $this->container['price_components'] = $data['price_components'] ?? null;
     }
@@ -238,6 +244,30 @@ class DeliveryGroupPricing implements ModelInterface, ArrayAccess, \JsonSerializ
     public function setCurrency($currency)
     {
         $this->container['currency'] = $currency;
+
+        return $this;
+    }
+
+    /**
+     * Gets net_price
+     *
+     * @return int|null
+     */
+    public function getNetPrice()
+    {
+        return $this->container['net_price'];
+    }
+
+    /**
+     * Sets net_price
+     *
+     * @param int|null $net_price net_price
+     *
+     * @return self
+     */
+    public function setNetPrice($net_price)
+    {
+        $this->container['net_price'] = $net_price;
 
         return $this;
     }

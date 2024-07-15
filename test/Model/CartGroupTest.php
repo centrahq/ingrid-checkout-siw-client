@@ -80,6 +80,15 @@ class CartGroupTest extends TestCase
     }
 
     /**
+     * Test attribute "attributes"
+     */
+    public function testPropertyAttributes()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "cart_item_sku_list"
      */
     public function testPropertyCartItemSkuList()

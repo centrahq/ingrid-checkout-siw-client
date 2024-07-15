@@ -89,6 +89,15 @@ class DeliveryGroupPricingTest extends TestCase
     }
 
     /**
+     * Test attribute "net_price"
+     */
+    public function testPropertyNetPrice()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "price"
      */
     public function testPropertyPrice()

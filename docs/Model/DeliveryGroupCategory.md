@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**base_price** | **int** | Base price of the carrier product for the given Delivery Promise. | [optional]
 **custom_text** | **string** | User-defined custom text displayed near the category in shipping selector widget. | [optional]
 **custom_warning_text** | **string** | User-defined custom warning text displayed near the category in shipping selector widget, that indicates e.g. edge cases related to the given category. | [optional]
 **external_id** | **string** |  | [optional]
