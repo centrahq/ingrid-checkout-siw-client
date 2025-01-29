@@ -80,24 +80,6 @@ class ErrorTest extends TestCase
     }
 
     /**
-     * Test attribute "code"
-     */
-    public function testPropertyCode()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "details"
-     */
-    public function testPropertyDetails()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "error"
      */
     public function testPropertyError()
@@ -107,9 +89,18 @@ class ErrorTest extends TestCase
     }
 
     /**
-     * Test attribute "message"
+     * Test attribute "trace_id"
      */
-    public function testPropertyMessage()
+    public function testPropertyTraceId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "details"
+     */
+    public function testPropertyDetails()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

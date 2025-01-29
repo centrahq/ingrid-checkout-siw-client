@@ -36,6 +36,7 @@ docs/Model/Dimensions.md
 docs/Model/Distance.md
 docs/Model/DistanceSpec.md
 docs/Model/Error.md
+docs/Model/ErrorDetails.md
 docs/Model/GetSessionResponse.md
 docs/Model/GroupContent.md
 docs/Model/LegLocation.md
@@ -97,6 +98,7 @@ lib/Model/Dimensions.php
 lib/Model/Distance.php
 lib/Model/DistanceSpec.php
 lib/Model/Error.php
+lib/Model/ErrorDetails.php
 lib/Model/GetSessionResponse.php
 lib/Model/GroupContent.php
 lib/Model/LegLocation.php
@@ -156,6 +158,7 @@ test/Model/DeliveryGroupWarehouseTest.php
 test/Model/DimensionsTest.php
 test/Model/DistanceSpecTest.php
 test/Model/DistanceTest.php
+test/Model/ErrorDetailsTest.php
 test/Model/ErrorTest.php
 test/Model/GetSessionResponseTest.php
 test/Model/GroupContentTest.php

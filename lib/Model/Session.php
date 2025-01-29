@@ -64,6 +64,7 @@ class Session implements ModelInterface, ArrayAccess, \JsonSerializable
         'checkout_session_id' => 'string',
         'delivery_groups' => '\OpenAPI\Client\Model\DeliveryGroup[]',
         'experiment_id' => 'string',
+        'purchase_country' => 'string',
         'status' => '\OpenAPI\Client\Model\SessionSessionStatus',
         'updated_at' => 'string'
     ];
@@ -81,6 +82,7 @@ class Session implements ModelInterface, ArrayAccess, \JsonSerializable
         'checkout_session_id' => null,
         'delivery_groups' => null,
         'experiment_id' => null,
+        'purchase_country' => null,
         'status' => null,
         'updated_at' => null
     ];
@@ -117,6 +119,7 @@ class Session implements ModelInterface, ArrayAccess, \JsonSerializable
         'checkout_session_id' => 'checkout_session_id',
         'delivery_groups' => 'delivery_groups',
         'experiment_id' => 'experiment_id',
+        'purchase_country' => 'purchase_country',
         'status' => 'status',
         'updated_at' => 'updated_at'
     ];
@@ -132,6 +135,7 @@ class Session implements ModelInterface, ArrayAccess, \JsonSerializable
         'checkout_session_id' => 'setCheckoutSessionId',
         'delivery_groups' => 'setDeliveryGroups',
         'experiment_id' => 'setExperimentId',
+        'purchase_country' => 'setPurchaseCountry',
         'status' => 'setStatus',
         'updated_at' => 'setUpdatedAt'
     ];
@@ -147,6 +151,7 @@ class Session implements ModelInterface, ArrayAccess, \JsonSerializable
         'checkout_session_id' => 'getCheckoutSessionId',
         'delivery_groups' => 'getDeliveryGroups',
         'experiment_id' => 'getExperimentId',
+        'purchase_country' => 'getPurchaseCountry',
         'status' => 'getStatus',
         'updated_at' => 'getUpdatedAt'
     ];
@@ -213,6 +218,7 @@ class Session implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['checkout_session_id'] = $data['checkout_session_id'] ?? null;
         $this->container['delivery_groups'] = $data['delivery_groups'] ?? null;
         $this->container['experiment_id'] = $data['experiment_id'] ?? null;
+        $this->container['purchase_country'] = $data['purchase_country'] ?? null;
         $this->container['status'] = $data['status'] ?? null;
         $this->container['updated_at'] = $data['updated_at'] ?? null;
     }
@@ -357,6 +363,30 @@ class Session implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setExperimentId($experiment_id)
     {
         $this->container['experiment_id'] = $experiment_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets purchase_country
+     *
+     * @return string|null
+     */
+    public function getPurchaseCountry()
+    {
+        return $this->container['purchase_country'];
+    }
+
+    /**
+     * Sets purchase_country
+     *
+     * @param string|null $purchase_country The country of the purchase.
+     *
+     * @return self
+     */
+    public function setPurchaseCountry($purchase_country)
+    {
+        $this->container['purchase_country'] = $purchase_country;
 
         return $this;
     }

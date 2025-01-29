@@ -83,6 +83,7 @@ Class | Method | HTTP request | Description
 - [Distance](docs/Model/Distance.md)
 - [DistanceSpec](docs/Model/DistanceSpec.md)
 - [Error](docs/Model/Error.md)
+- [ErrorDetails](docs/Model/ErrorDetails.md)
 - [GetSessionResponse](docs/Model/GetSessionResponse.md)
 - [GroupContent](docs/Model/GroupContent.md)
 - [LegLocation](docs/Model/LegLocation.md)

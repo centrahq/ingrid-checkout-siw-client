@@ -1,6 +1,6 @@
 <?php
 /**
- * SessionTest
+ * ErrorDetailsTest
  *
  * PHP version 7.3
  *
@@ -31,15 +31,15 @@ namespace OpenAPI\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * SessionTest Class Doc Comment
+ * ErrorDetailsTest Class Doc Comment
  *
  * @category    Class
- * @description Session
+ * @description ErrorDetails
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class SessionTest extends TestCase
+class ErrorDetailsTest extends TestCase
 {
 
     /**
@@ -71,81 +71,45 @@ class SessionTest extends TestCase
     }
 
     /**
-     * Test "Session"
+     * Test "ErrorDetails"
      */
-    public function testSession()
+    public function testErrorDetails()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "additional_information"
+     * Test attribute "msg"
      */
-    public function testPropertyAdditionalInformation()
+    public function testPropertyMsg()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "cart"
+     * Test attribute "cause"
      */
-    public function testPropertyCart()
+    public function testPropertyCause()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "checkout_session_id"
+     * Test attribute "source"
      */
-    public function testPropertyCheckoutSessionId()
+    public function testPropertySource()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "delivery_groups"
+     * Test attribute "cause_text"
      */
-    public function testPropertyDeliveryGroups()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "experiment_id"
-     */
-    public function testPropertyExperimentId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "purchase_country"
-     */
-    public function testPropertyPurchaseCountry()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "status"
-     */
-    public function testPropertyStatus()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "updated_at"
-     */
-    public function testPropertyUpdatedAt()
+    public function testPropertyCauseText()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

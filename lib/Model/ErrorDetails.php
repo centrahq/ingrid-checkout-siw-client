@@ -1,6 +1,6 @@
 <?php
 /**
- * Error
+ * ErrorDetails
  *
  * PHP version 7.3
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \OpenAPI\Client\ObjectSerializer;
 
 /**
- * Error Class Doc Comment
+ * ErrorDetails Class Doc Comment
  *
  * @category Class
  * @package  OpenAPI\Client
@@ -42,7 +42,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class Error implements ModelInterface, ArrayAccess, \JsonSerializable
+class ErrorDetails implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class Error implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'Error';
+    protected static $openAPIModelName = 'Error_details';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,9 +59,10 @@ class Error implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'error' => 'string',
-        'trace_id' => 'string',
-        'details' => '\OpenAPI\Client\Model\ErrorDetails'
+        'msg' => 'string',
+        'cause' => 'int',
+        'source' => 'string',
+        'cause_text' => 'string'
     ];
 
     /**
@@ -72,9 +73,10 @@ class Error implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'error' => null,
-        'trace_id' => null,
-        'details' => null
+        'msg' => null,
+        'cause' => 'int32',
+        'source' => null,
+        'cause_text' => null
     ];
 
     /**
@@ -104,9 +106,10 @@ class Error implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'error' => 'error',
-        'trace_id' => 'trace_id',
-        'details' => 'details'
+        'msg' => 'msg',
+        'cause' => 'cause',
+        'source' => 'source',
+        'cause_text' => 'cause_text'
     ];
 
     /**
@@ -115,9 +118,10 @@ class Error implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'error' => 'setError',
-        'trace_id' => 'setTraceId',
-        'details' => 'setDetails'
+        'msg' => 'setMsg',
+        'cause' => 'setCause',
+        'source' => 'setSource',
+        'cause_text' => 'setCauseText'
     ];
 
     /**
@@ -126,9 +130,10 @@ class Error implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'error' => 'getError',
-        'trace_id' => 'getTraceId',
-        'details' => 'getDetails'
+        'msg' => 'getMsg',
+        'cause' => 'getCause',
+        'source' => 'getSource',
+        'cause_text' => 'getCauseText'
     ];
 
     /**
@@ -188,9 +193,10 @@ class Error implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['error'] = $data['error'] ?? null;
-        $this->container['trace_id'] = $data['trace_id'] ?? null;
-        $this->container['details'] = $data['details'] ?? null;
+        $this->container['msg'] = $data['msg'] ?? null;
+        $this->container['cause'] = $data['cause'] ?? null;
+        $this->container['source'] = $data['source'] ?? null;
+        $this->container['cause_text'] = $data['cause_text'] ?? null;
     }
 
     /**
@@ -218,73 +224,97 @@ class Error implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets error
+     * Gets msg
      *
      * @return string|null
      */
-    public function getError()
+    public function getMsg()
     {
-        return $this->container['error'];
+        return $this->container['msg'];
     }
 
     /**
-     * Sets error
+     * Sets msg
      *
-     * @param string|null $error error
+     * @param string|null $msg msg
      *
      * @return self
      */
-    public function setError($error)
+    public function setMsg($msg)
     {
-        $this->container['error'] = $error;
+        $this->container['msg'] = $msg;
 
         return $this;
     }
 
     /**
-     * Gets trace_id
+     * Gets cause
      *
-     * @return string|null
+     * @return int|null
      */
-    public function getTraceId()
+    public function getCause()
     {
-        return $this->container['trace_id'];
+        return $this->container['cause'];
     }
 
     /**
-     * Sets trace_id
+     * Sets cause
      *
-     * @param string|null $trace_id trace_id
+     * @param int|null $cause cause
      *
      * @return self
      */
-    public function setTraceId($trace_id)
+    public function setCause($cause)
     {
-        $this->container['trace_id'] = $trace_id;
+        $this->container['cause'] = $cause;
 
         return $this;
     }
 
     /**
-     * Gets details
+     * Gets source
      *
-     * @return \OpenAPI\Client\Model\ErrorDetails|null
+     * @return string|null
      */
-    public function getDetails()
+    public function getSource()
     {
-        return $this->container['details'];
+        return $this->container['source'];
     }
 
     /**
-     * Sets details
+     * Sets source
      *
-     * @param \OpenAPI\Client\Model\ErrorDetails|null $details details
+     * @param string|null $source source
      *
      * @return self
      */
-    public function setDetails($details)
+    public function setSource($source)
     {
-        $this->container['details'] = $details;
+        $this->container['source'] = $source;
+
+        return $this;
+    }
+
+    /**
+     * Gets cause_text
+     *
+     * @return string|null
+     */
+    public function getCauseText()
+    {
+        return $this->container['cause_text'];
+    }
+
+    /**
+     * Sets cause_text
+     *
+     * @param string|null $cause_text cause_text
+     *
+     * @return self
+     */
+    public function setCauseText($cause_text)
+    {
+        $this->container['cause_text'] = $cause_text;
 
         return $this;
     }
