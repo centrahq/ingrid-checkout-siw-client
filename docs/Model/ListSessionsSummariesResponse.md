@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **external_id** | **string** |  | [optional]
+**purchase_country** | **string** |  | [optional]
 **result** | [**\OpenAPI\Client\Model\SessionSummary**](SessionSummary.md) |  | [optional]
 **tos_id** | **string** |  | [optional]
 

@@ -89,6 +89,15 @@ class ListSessionsSummariesResponseTest extends TestCase
     }
 
     /**
+     * Test attribute "purchase_country"
+     */
+    public function testPropertyPurchaseCountry()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "result"
      */
     public function testPropertyResult()

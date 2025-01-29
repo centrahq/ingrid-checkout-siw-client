@@ -34,7 +34,7 @@ use PHPUnit\Framework\TestCase;
  * PickupLocationTypeTest Class Doc Comment
  *
  * @category    Class
- * @description - UNKNOWN_PICKUP_LOCATION_TYPE: Location type is now known for some reason  - LOCKER: Locker location type. Example Instabox or a DHL locker  - STORE: Can be a merchant&#39;s store or any other store that handles logistics  - POSTOFFICE: Postal office  - MANNED: A manned service point
+ * @description - UNKNOWN_PICKUP_LOCATION_TYPE: Location type is not known for some reason  - LOCKER: Locker location type. Example Instabox or a DHL locker  - STORE: Can be a merchant&#39;s store or any other store that handles logistics  - POSTOFFICE: Postal office  - MANNED: A manned service point
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech

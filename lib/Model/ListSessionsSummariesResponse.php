@@ -61,6 +61,7 @@ class ListSessionsSummariesResponse implements ModelInterface, ArrayAccess, \Jso
       */
     protected static $openAPITypes = [
         'external_id' => 'string',
+        'purchase_country' => 'string',
         'result' => '\OpenAPI\Client\Model\SessionSummary',
         'tos_id' => 'string'
     ];
@@ -74,6 +75,7 @@ class ListSessionsSummariesResponse implements ModelInterface, ArrayAccess, \Jso
       */
     protected static $openAPIFormats = [
         'external_id' => null,
+        'purchase_country' => null,
         'result' => null,
         'tos_id' => null
     ];
@@ -106,6 +108,7 @@ class ListSessionsSummariesResponse implements ModelInterface, ArrayAccess, \Jso
      */
     protected static $attributeMap = [
         'external_id' => 'external_id',
+        'purchase_country' => 'purchase_country',
         'result' => 'result',
         'tos_id' => 'tos_id'
     ];
@@ -117,6 +120,7 @@ class ListSessionsSummariesResponse implements ModelInterface, ArrayAccess, \Jso
      */
     protected static $setters = [
         'external_id' => 'setExternalId',
+        'purchase_country' => 'setPurchaseCountry',
         'result' => 'setResult',
         'tos_id' => 'setTosId'
     ];
@@ -128,6 +132,7 @@ class ListSessionsSummariesResponse implements ModelInterface, ArrayAccess, \Jso
      */
     protected static $getters = [
         'external_id' => 'getExternalId',
+        'purchase_country' => 'getPurchaseCountry',
         'result' => 'getResult',
         'tos_id' => 'getTosId'
     ];
@@ -190,6 +195,7 @@ class ListSessionsSummariesResponse implements ModelInterface, ArrayAccess, \Jso
     public function __construct(array $data = null)
     {
         $this->container['external_id'] = $data['external_id'] ?? null;
+        $this->container['purchase_country'] = $data['purchase_country'] ?? null;
         $this->container['result'] = $data['result'] ?? null;
         $this->container['tos_id'] = $data['tos_id'] ?? null;
     }
@@ -238,6 +244,30 @@ class ListSessionsSummariesResponse implements ModelInterface, ArrayAccess, \Jso
     public function setExternalId($external_id)
     {
         $this->container['external_id'] = $external_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets purchase_country
+     *
+     * @return string|null
+     */
+    public function getPurchaseCountry()
+    {
+        return $this->container['purchase_country'];
+    }
+
+    /**
+     * Sets purchase_country
+     *
+     * @param string|null $purchase_country purchase_country
+     *
+     * @return self
+     */
+    public function setPurchaseCountry($purchase_country)
+    {
+        $this->container['purchase_country'] = $purchase_country;
 
         return $this;
     }
